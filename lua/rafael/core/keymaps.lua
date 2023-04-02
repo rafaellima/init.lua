@@ -88,3 +88,6 @@ keymap.set("n", "<leader>uf", ":UndotreeFocus<CR>")
 
 -- git fugitive
 keymap.set("n", "<leader>ms", ":G<CR>") -- git status
+
+-- git worktree + telescope
+keymap.set("n", "<leader>tw", ":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
