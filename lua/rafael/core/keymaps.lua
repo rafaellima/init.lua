@@ -91,3 +91,4 @@ keymap.set("n", "<leader>ms", ":G<CR>") -- git status
 
 -- git worktree + telescope
 keymap.set("n", "<leader>tw", ":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
+keymap.set("n", "<leader>tb", ":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
