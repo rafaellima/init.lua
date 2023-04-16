@@ -117,6 +117,9 @@ return packer.startup(function(use)
 	-- git workflow
 	use("ThePrimeagen/git-worktree.nvim")
 
+  -- rust
+  use("rust-lang/rust.vim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
