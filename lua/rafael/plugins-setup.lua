@@ -112,7 +112,7 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-	use("tpope/vim-fugitive") -- git wrapper
+  use("kdheepak/lazygit.nvim")
 
 	-- git workflow
 	use("ThePrimeagen/git-worktree.nvim")
