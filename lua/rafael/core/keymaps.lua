@@ -53,17 +53,10 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- telescope git commands
--- keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
--- keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
--- keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
--- keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 keymap.set("n", "<leader>gs", ":LazyGit<CR>") -- git status
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-
--- keymap.set("n", "<leader>bp", ":bprevious<CR>") -- go to previous buffer
--- keymap.set("n", "<leader>bn", ":bnext<CR>") -- go to next buffer
 
 -- harpoon
 keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- open up harpoon UI
@@ -92,4 +85,4 @@ keymap.set("n", "<leader>tw", ":lua require('telescope').extensions.git_worktree
 keymap.set("n", "<leader>tb", ":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
 
 -- rspec commands
-keymap.set("n", "<leader>,f", ":!bundle exec rspec %<CR>") -- current file
+keymap.set("n", "<leader>,f", ":!bundle exec rspec %<CR>") -- run spec for the current file
