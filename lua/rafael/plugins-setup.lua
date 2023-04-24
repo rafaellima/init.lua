@@ -33,7 +33,14 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-  use { "catppuccin/nvim", as = "catppuccin" } -- colorscheme
+   -- colorscheme
+  use { 
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+		  vim.cmd('colorscheme catppuccin')
+	  end
+  }
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
