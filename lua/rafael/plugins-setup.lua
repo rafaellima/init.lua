@@ -123,6 +123,9 @@ return packer.startup(function(use)
   -- rust
   use("rust-lang/rust.vim")
 
+  -- golang
+  use("fatih/vim-go")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
