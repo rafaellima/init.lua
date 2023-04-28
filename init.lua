@@ -1,6 +1,7 @@
 require("rafael.plugins-setup")
 require("rafael.core.options")
 require("rafael.core.keymaps")
+require("rafael.core.colorscheme")
 require("rafael.plugins.comment")
 require("rafael.plugins.nvim-tree")
 require("rafael.plugins.lualine")
