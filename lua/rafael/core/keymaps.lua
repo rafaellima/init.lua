@@ -85,4 +85,5 @@ keymap.set("n", "<leader>tw", ":lua require('telescope').extensions.git_worktree
 keymap.set("n", "<leader>tb", ":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
 
 -- rspec commands
-keymap.set("n", "<leader>,f", ":!bundle exec rspec %<CR>") -- run spec for the current file
+keymap.set("n", "<leader>,f", ":lua require('nvim-rspec').run_spec()<CR>") -- run spec for the current file
+keymap.set("n", "<leader>,s", ":lua require('nvim-rspec').run_nearest_spec()<CR>") -- run nearest spec based on the current file and line

@@ -126,6 +126,9 @@ return packer.startup(function(use)
   -- golang
   use("fatih/vim-go")
 
+  -- ruby/rspec
+  use("rafaellima/nvim-rspec")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
