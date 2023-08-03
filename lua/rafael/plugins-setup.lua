@@ -129,6 +129,9 @@ return packer.startup(function(use)
   -- ruby/rspec
   use("rafaellima/nvim-rspec")
 
+  -- wakatime
+  use("wakatime/vim-wakatime")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
