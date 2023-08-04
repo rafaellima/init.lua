@@ -132,6 +132,9 @@ return packer.startup(function(use)
   -- wakatime
   use("wakatime/vim-wakatime")
 
+  -- terraform
+  use("hashivim/vim-terraform")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
