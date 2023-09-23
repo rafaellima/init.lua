@@ -87,3 +87,6 @@ keymap.set("n", "<leader>tb", ":lua require('telescope').extensions.git_worktree
 -- rspec commands
 keymap.set("n", "<leader>,f", ":lua require('nvim-rspec').run_spec()<CR>") -- run spec for the current file
 keymap.set("n", "<leader>,s", ":lua require('nvim-rspec').run_nearest_spec()<CR>") -- run nearest spec based on the current file and line
+
+-- rubocop command
+keymap.set("n", "<leader>,r", ":!bundle exec rubocop --parallel<CR>")
