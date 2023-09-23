@@ -40,3 +40,4 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
+opt.maxmempattern=5000 -- the maximum amount of memory that can be used for pattern matching operations.
