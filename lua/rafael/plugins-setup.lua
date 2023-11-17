@@ -123,9 +123,6 @@ return packer.startup(function(use)
   -- golang
   use("fatih/vim-go")
 
-  -- ruby/rspec
-  use("rafaellima/nvim-rspec")
-
   -- wakatime
   use("wakatime/vim-wakatime")
 
