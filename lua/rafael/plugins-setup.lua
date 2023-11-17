@@ -138,6 +138,9 @@ return packer.startup(function(use)
     },
   })
 
+  -- mini/mini-surround
+  use { 'echasnovski/mini.surround', branch = 'stable' }
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
