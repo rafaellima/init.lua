@@ -82,3 +82,8 @@ keymap.set("n", "<leader>uf", ":UndotreeFocus<CR>")
 
 -- rubocop command
 keymap.set("n", "<leader>,r", ":!bundle exec rubocop --parallel<CR>")
+
+-- rest-nvim
+keymap.set("n", "<leader>rn", "<Plug>RestNvim<CR>")
+keymap.set("n", "<leader>rp", "<Plug>RestNvimPreview<CR>")
+keymap.set("n", "<leader>rl", "<Plug>RestNvimLast<CR>")
