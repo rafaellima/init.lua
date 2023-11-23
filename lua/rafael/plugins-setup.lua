@@ -141,6 +141,9 @@ return packer.startup(function(use)
   -- mini/mini-surround
   use { 'echasnovski/mini.surround', branch = 'stable' }
 
+  -- rest-nvim
+  use { 'rest-nvim/rest.nvim', requires = { "nvim-lua/plenary.nvim" } }
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
