@@ -144,6 +144,8 @@ return packer.startup(function(use)
   -- rest-nvim
   use { 'rest-nvim/rest.nvim', requires = { "nvim-lua/plenary.nvim" } }
 
+  -- copilot
+  use { 'github/copilot.vim' }
 
   -- which-key
   use {
