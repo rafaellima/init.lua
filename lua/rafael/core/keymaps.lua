@@ -52,8 +52,8 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
--- telescope git commands
-keymap.set("n", "<leader>gs", ":LazyGit<CR>") -- git status
+-- neogit
+keymap.set("n", "<leader>ns", ":Neogit<CR>") -- open neogit status
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
