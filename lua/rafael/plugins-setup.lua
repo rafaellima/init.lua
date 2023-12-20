@@ -117,6 +117,9 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
   use("kdheepak/lazygit.nvim")
 
+  -- neogit
+  use("NeogitOrg/neogit")
+
   -- rust
   use("rust-lang/rust.vim")
 
