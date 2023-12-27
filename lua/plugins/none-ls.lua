@@ -12,6 +12,6 @@ return {
       },
     })
 
-    vim.keymap('n', '<leader>fm', vim.lsp.buf.format, {})
+    vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format, {})
   end
 }
