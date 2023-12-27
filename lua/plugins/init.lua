@@ -69,7 +69,6 @@ return {
 
   -- git integration
   "lewis6991/gitsigns.nvim", -- show line modifications on left hand side
-  "NeogitOrg/neogit",
 
   "rust-lang/rust.vim",
   "fatih/vim-go",
