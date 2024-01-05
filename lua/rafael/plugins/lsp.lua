@@ -8,7 +8,7 @@ lsp.ensure_installed({
 	"cssls",
 	"dockerls",
 	"gopls",
-	-- "solargraph",
+	"solargraph",
 	"rust_analyzer",
 	"bashls",
 	"lua_ls",
