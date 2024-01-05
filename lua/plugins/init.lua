@@ -76,15 +76,6 @@ return {
 
   "wakatime/vim-wakatime",
 
-  -- neotest
-  {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-neotest/neotest-go",
-      "olimorris/neotest-rspec",
-    },
-  },
-
   { "echasnovski/mini.surround", branch = 'stable' },
 
   { 'rest-nvim/rest.nvim', dependencies = { "nvim-lua/plenary.nvim" } },
