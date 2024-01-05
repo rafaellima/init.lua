@@ -18,11 +18,6 @@ return {
   "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
 
-  -- autocompletion
-  "hrsh7th/nvim-cmp", -- completion plugin
-  "hrsh7th/cmp-buffer", -- source for text in buffer
-  "hrsh7th/cmp-path", -- source for file system paths
-
   "ThePrimeagen/harpoon",
 
   "windwp/nvim-autopairs", -- autoclose parens, brackets, quotes, etc...
