@@ -14,8 +14,6 @@ return {
 
   "numToStr/Comment.nvim", -- commenting with gc
 
-  "nvim-tree/nvim-tree.lua",
-  "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
 
   "ThePrimeagen/harpoon",

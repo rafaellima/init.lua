@@ -38,15 +38,8 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
--- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
-keymap.set("n", "<leader>tc", ":NvimTreeCollapse<CR>") -- collapse file explorer
-
 -- neogit
 keymap.set("n", "<leader>ns", ":Neogit<CR>") -- open neogit status
-
--- restart lsp server (not on youtube nvim video)
-keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- harpoon
 keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- open up harpoon UI
