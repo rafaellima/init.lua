@@ -8,7 +8,7 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 		config = function()
-			local neotree = require("neotree")
+			local neotree = require("neo-tree")
 			neotree.setup({
 				follow_current_file = {
 					enabled = true,
