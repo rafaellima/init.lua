@@ -1,11 +1,6 @@
 return {
   "nvim-lua/plenary.nvim", -- lua functions that many plugins use
 
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine'
-  },
-
   "christoomey/vim-tmux-navigator", -- tmux & split window navigation
   "szw/vim-maximizer", -- maximizes and restores current window
 

@@ -16,8 +16,6 @@ vim.g.mapleader = " "
 
 require("lazy").setup("plugins")
 
-vim.cmd('colorscheme rose-pine')
-
 require("rafael.core.options")
 require("rafael.core.keymaps")
 require("rafael.plugins.comment")
