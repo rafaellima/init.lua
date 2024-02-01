@@ -5,6 +5,9 @@ end
 
 -- configure harpoon
 harpoon.setup({
+  menu = {
+    width = vim.api.nvim_win_get_width(0) - 150,
+  },
 	global_settings = {
 		-- sets the marks upon calling `toggle` on the ui, instead of require `:w`.
 		save_on_toggle = false,
