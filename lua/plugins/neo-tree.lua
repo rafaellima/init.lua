@@ -14,6 +14,11 @@ return {
 					enabled = true,
 					leave_dirs_open = false,
 				},
+        filesystem = {
+          filtered_items = {
+            hide_dotfiles = false,
+          }
+        },
 			})
 
 			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", {})
