@@ -6,6 +6,13 @@ return {
     config = function()
       require("catppuccin").setup({
         transparent_background = false,
+        color_overrides = {
+          mocha = {
+            base = "#000000",
+            mantle = "#000000",
+            crust = "#000000",
+          },
+        },
         integrations = {
           harpoon = true,
           neotree = true,
