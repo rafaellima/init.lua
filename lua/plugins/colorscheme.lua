@@ -5,14 +5,14 @@ return {
     priority = 1000,
     config = function()
       require("catppuccin").setup({
-        transparent_background = false,
-        color_overrides = {
-          mocha = {
-            base = "#000000",
-            mantle = "#000000",
-            crust = "#000000",
-          },
-        },
+        transparent_background = true,
+        -- color_overrides = {
+        --   mocha = {
+        --     base = "#000000",
+        --     mantle = "#000000",
+        --     crust = "#000000",
+        --   },
+        -- },
         integrations = {
           harpoon = true,
           neotree = true,
