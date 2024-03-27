@@ -49,10 +49,6 @@ keymap.set("n", "<leader>hc", ":lua require('harpoon.mark').clear_all()<CR>") --
 keymap.set("n", "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>") -- go to next harpoon marker
 keymap.set("n", "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>") -- go to previous harpoon marker
 
--- neo-test
-keymap.set("n", "<leader>,s", ":lua require('neotest').run.run()<CR>") -- run spec for the current file
-keymap.set("n", "<leader>,f", ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>") -- run nearest spec based on the current file and line
-
 -- bash scripts chmod +x
 keymap.set("n", "<leader>x", ":!chmod +x %<CR>") -- make current file executable
 

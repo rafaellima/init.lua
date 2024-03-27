@@ -2,12 +2,27 @@ return {
   {
     "vim-test/vim-test",
     dependencies = { "preservim/vimux" },
-    vim.keymap.set("n", "<leader>t", ":TestNearest<CR>"),
-    vim.keymap.set("n", "<leader>T", ":TestFile<CR>"),
-    vim.keymap.set("n", "<leader>a", ":TestSuite<CR>"),
-    vim.keymap.set("n", "<leader>l", ":TestLast<CR>"),
-    vim.keymap.set("n", "<leader>g", ":TestVisit<CR>"),
+    vim.keymap.set("n", "<leader>,t", ":TestNearest<CR>"),
 
     vim.cmd("let test#strategy = 'vimux'")
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "olimorris/neotest-rspec",
+      "nvim-neotest/neotest-go",
+    },
+    vim.keymap.set("n", "<leader>,s", ":lua require('neotest').run.run()<CR>"),
+    vim.keymap.set("n", "<leader>,f", ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>"),
+
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec")
+        },
+      })
+    end
   }
 }
