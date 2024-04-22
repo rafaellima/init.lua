@@ -24,8 +24,6 @@ return {
 
   { "echasnovski/mini.surround", branch = 'stable' },
 
-  { 'rest-nvim/rest.nvim', dependencies = { "nvim-lua/plenary.nvim" } },
-
   "github/copilot.vim",
 
   {
