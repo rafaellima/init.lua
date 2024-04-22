@@ -11,8 +11,6 @@ return {
 
   "nvim-lualine/lualine.nvim",
 
-  "ThePrimeagen/harpoon",
-
   "windwp/nvim-autopairs", -- autoclose parens, brackets, quotes, etc...
 
   -- git integration

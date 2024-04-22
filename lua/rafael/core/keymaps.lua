@@ -41,14 +41,6 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 -- neogit
 keymap.set("n", "<leader>ns", ":Neogit<CR>") -- open neogit status
 
--- harpoon
-keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- open up harpoon UI
-keymap.set("n", "<leader>hm", ":lua require('harpoon.mark').add_file()<CR>") -- add current file to harpoon marker 1
-keymap.set("n", "<leader>hr", ":lua require('harpoon.mark').rm_file()<CR>") -- remove current file to harpoon marker 1
-keymap.set("n", "<leader>hc", ":lua require('harpoon.mark').clear_all()<CR>") -- clear all harpoon markers
-keymap.set("n", "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>") -- go to next harpoon marker
-keymap.set("n", "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>") -- go to previous harpoon marker
-
 -- bash scripts chmod +x
 keymap.set("n", "<leader>x", ":!chmod +x %<CR>") -- make current file executable
 
