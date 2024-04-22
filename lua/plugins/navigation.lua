@@ -5,14 +5,7 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       local harpoon = require("harpoon")
-      harpoon:setup({
-        menu = {
-          width = vim.api.nvim_win_get_width(0) - 150,
-        },
-        global_settings = {
-          sync_on_ui_close = true
-        }
-      })
+      harpoon:setup()
 
       -- basic telescope configuration
       local conf = require("telescope.config").values
