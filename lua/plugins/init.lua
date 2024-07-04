@@ -25,7 +25,6 @@ return {
   { "echasnovski/mini.surround", branch = 'stable' },
 
   -- "github/copilot.vim",
-  "supermaven-inc/supermaven-nvim",
 
   {
     "folke/which-key.nvim",
