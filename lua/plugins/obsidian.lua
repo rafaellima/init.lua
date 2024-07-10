@@ -9,27 +9,14 @@ return {
   opts = {
     workspaces = {
       {
-        name = "garden",
-        path = "~/personal/second-brain/The Garden",
+        name = "TheGarden",
+        path = "/Users/rafael/Library/Mobile Documents/iCloud~md~obsidian/Documents/TheGarden",
       },
     },
   },
 
-  notes_subdir = "0 - Inbox",
-  new_notes_location = "notes_subdir",
-
   completion = {
     nvim_cmp = true,
     min_chars = 2,
-  },
-  templates = {
-    folder = "5 - Templates",
-    date_format = "%Y-%m-%d",
-    time_format = "%H:%M",
-    substitutions = {},
-  },
-  daily_notes = {
-    folder = "Daily Notes",
-    template = "Templates/Daily.md",
   },
 }
