@@ -10,7 +10,7 @@ return {
     workspaces = {
       {
         name = "garden",
-        path = "~/Documents/The Garden",
+        path = "~/personal/second-brain/The Garden",
       },
     },
   },
