@@ -28,4 +28,8 @@ return {
     time_format = "%H:%M",
     substitutions = {},
   },
+  daily_notes = {
+    folder = "Daily Notes",
+    template = "Templates/Daily.md",
+  },
 }
