@@ -17,6 +17,7 @@ return {
           "lua_ls",
           "gopls",
           "solargraph",
+          "elixirls",
         }
       })
     end
