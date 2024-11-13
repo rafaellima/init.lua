@@ -29,6 +29,7 @@ return {
       vim.keymap.set("n", "<leader>hh", function() toggle_telescope(harpoon:list()) end, { desc = "Open harpoon window" })
       vim.keymap.set("n", "<leader>hm", function() harpoon:list():add() end, { desc = "Add current file to harpoon" })
       vim.keymap.set("n", "<leader>hc", function() harpoon:list():clear() end, { desc = "Clear harpoon" })
+      vim.keymap.set("n", "<leader>hr", function() harpoon:list():remove() end, { desc = "Remove current file from harpoon" })
 
       vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
       vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
