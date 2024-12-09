@@ -17,7 +17,7 @@ return {
           "lua_ls",
           "gopls",
           -- "solargraph",
-          "ruby-lsp",
+          "ruby_lsp",
           "elixirls",
         }
       })
