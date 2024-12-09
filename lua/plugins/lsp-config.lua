@@ -36,6 +36,17 @@ return {
       lspconfig.rubocop.setup({ capabilities = capabilities })
       lspconfig.elixirls.setup({ cmd = { "/opt/homebrew/bin/elixir-ls" }, capabilities = capabilities })
 
+      vim.opt.signcolumn = "yes"
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "ruby",
+        callback = function()
+          vim.lsp.start({
+            name = "rubocop",
+            cmd = { "bundle", "exec", "rubocop", "--lsp" },
+          })
+        end,
+      })
+
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)
