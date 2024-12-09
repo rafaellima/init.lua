@@ -33,7 +33,6 @@ return {
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
       lspconfig.ruby_lsp.setup({ capabilities = capabilities })
-      lspconfig.rubocop.setup({ capabilities = capabilities })
       lspconfig.elixirls.setup({ cmd = { "/opt/homebrew/bin/elixir-ls" }, capabilities = capabilities })
 
       vim.opt.signcolumn = "yes"
@@ -44,6 +43,13 @@ return {
             name = "rubocop",
             cmd = { "bundle", "exec", "rubocop", "--lsp" },
           })
+        end,
+      })
+
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.rb",
+        callback = function()
+          vim.lsp.buf.format()
         end,
       })
 
