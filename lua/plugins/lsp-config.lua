@@ -16,7 +16,8 @@ return {
         ensure_installed = {
           "lua_ls",
           "gopls",
-          "solargraph",
+          -- "solargraph",
+          "ruby-lsp",
           "elixirls",
         }
       })
@@ -31,7 +32,8 @@ return {
 
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
-      lspconfig.solargraph.setup({ capabilities = capabilities })
+      -- lspconfig.solargraph.setup({ capabilities = capabilities })
+      lspconfig.ruby_lsp.setup({ capabilities = capabilities })
       lspconfig.elixirls.setup({ cmd = { "/opt/homebrew/bin/elixir-ls" }, capabilities = capabilities })
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
