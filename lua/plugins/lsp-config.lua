@@ -1,12 +1,12 @@
 return {
   {
-    "hrsh7th/cmp-nvim-lsp"
+    "hrsh7th/cmp-nvim-lsp",
   },
   {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -17,10 +17,11 @@ return {
           "lua_ls",
           "gopls",
           "ruby_lsp",
+          "rubocop",
           "elixirls",
-        }
+        },
       })
-    end
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -32,29 +33,31 @@ return {
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.gopls.setup({ capabilities = capabilities })
       lspconfig.ruby_lsp.setup({ capabilities = capabilities })
+      lspconfig.rubocop.setup({ capabilities = capabilities })
       lspconfig.elixirls.setup({ cmd = { "/opt/homebrew/bin/elixir-ls" }, capabilities = capabilities })
 
-      vim.api.nvim_create_autocmd('LspAttach', {
+      vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)
-          if not client then return end
+          if not client then
+            return
+          end
 
-          if client.supports_method('textDocument/formatting') then
-            vim.api.nvim_create_autocmd('BufWritePre', {
+          if client.supports_method("textDocument/formatting") then
+            vim.api.nvim_create_autocmd("BufWritePre", {
               buffer = args.buf,
               callback = function()
                 vim.lsp.buf.format({ bufnr = args.buf, id = args.data.client_id })
-              end
+              end,
             })
           end
-        end
+        end,
       })
 
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set('n', 'gn', vim.lsp.buf.rename, {})
-      vim.keymap.set({ 'n', 'v' }, '<leader> ca', vim.lsp.buf.code_action, {})
-    end
-  }
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+      vim.keymap.set("n", "gn", vim.lsp.buf.rename, {})
+      vim.keymap.set({ "n", "v" }, "<leader> ca", vim.lsp.buf.code_action, {})
+    end,
+  },
 }
-
