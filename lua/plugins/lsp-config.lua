@@ -19,6 +19,7 @@ return {
           "ruby_lsp",
           "rubocop",
           "elixirls",
+          "zls",
         },
       })
     end,
@@ -34,6 +35,7 @@ return {
       lspconfig.gopls.setup({ capabilities = capabilities })
       lspconfig.ruby_lsp.setup({ capabilities = capabilities })
       lspconfig.elixirls.setup({ cmd = { "/opt/homebrew/bin/elixir-ls" }, capabilities = capabilities })
+      lspconfig.zls.setup({ capabilities = capabilities })
 
       vim.opt.signcolumn = "yes"
       vim.api.nvim_create_autocmd("FileType", {
