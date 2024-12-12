@@ -17,7 +17,7 @@ return {
           "lua_ls",
           "gopls",
           "ruby_lsp",
-          "rubocop",
+          -- "rubocop",
           "elixirls",
           "zls",
         },
@@ -37,16 +37,16 @@ return {
       lspconfig.elixirls.setup({ cmd = { "/opt/homebrew/bin/elixir-ls" }, capabilities = capabilities })
       lspconfig.zls.setup({ capabilities = capabilities })
 
-      vim.opt.signcolumn = "yes"
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "ruby",
-        callback = function()
-          vim.lsp.start({
-            name = "rubocop",
-            cmd = { "bundle", "exec", "rubocop", "--lsp" },
-          })
-        end,
-      })
+      -- vim.opt.signcolumn = "yes"
+      -- vim.api.nvim_create_autocmd("FileType", {
+      --   pattern = "ruby",
+      --   callback = function()
+      --     vim.lsp.start({
+      --       name = "rubocop",
+      --       cmd = { "bundle", "exec", "rubocop", "--lsp" },
+      --     })
+      --   end,
+      -- })
 
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = "*.rb",
