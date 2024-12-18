@@ -17,7 +17,6 @@ return {
           "lua_ls",
           "gopls",
           "ruby_lsp",
-          -- "rubocop",
           "elixirls",
           "zls",
         },
@@ -28,7 +27,7 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
       local lspconfig = require("lspconfig")
 
       lspconfig.lua_ls.setup({ capabilities = capabilities })
@@ -36,17 +35,6 @@ return {
       lspconfig.ruby_lsp.setup({ capabilities = capabilities })
       lspconfig.elixirls.setup({ cmd = { "/opt/homebrew/bin/elixir-ls" }, capabilities = capabilities })
       lspconfig.zls.setup({ capabilities = capabilities })
-
-      -- vim.opt.signcolumn = "yes"
-      -- vim.api.nvim_create_autocmd("FileType", {
-      --   pattern = "ruby",
-      --   callback = function()
-      --     vim.lsp.start({
-      --       name = "rubocop",
-      --       cmd = { "bundle", "exec", "rubocop", "--lsp" },
-      --     })
-      --   end,
-      -- })
 
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = "*.rb",
