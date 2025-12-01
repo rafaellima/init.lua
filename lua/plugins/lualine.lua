@@ -5,32 +5,23 @@ return {
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-    local colors = {
-      blue = "#65D1FF",
-      green = "#3EFFDC",
-      violet = "#FF61EF",
-      yellow = "#FFDA7B",
-      red = "#FF4A4A",
-      fg = "#c3ccdc",
-      bg = "#112638",
-      inactive_bg = "#2c3043",
-    }
-
     lualine.setup({
       options = {
-        theme = "tokyonight",
+        theme = "catppuccin",
+        section_separators = { "", "" },
+        component_separators = { "", "" },
+        icons_enabled = true,
+      },
+      dependencies = {
+        "nvim-tree/nvim-web-devicons",
       },
       sections = {
-        lualine_x = {
-          {
-            lazy_status.updates,
-            cond = lazy_status.has_updates,
-            color = { fg = "#ff9e64" },
-          },
-          { "encoding" },
-          { "fileformat" },
-          { "filetype" },
-        },
+        lualine_a = { "mode" },
+        lualine_b = { "branch", "diff", "diagnostics" },
+        lualine_c = { "filename" },
+        lualine_x = { "filetype" },
+        lualine_y = { "progress" },
+        lualine_z = { "location" },
       },
     })
   end,
